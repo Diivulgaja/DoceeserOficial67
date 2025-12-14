@@ -294,7 +294,6 @@ const ProductCard = ({ product, onAdd, onCustomize }) => {
       </div>
     </div>
   );
-
   const AboutPage = (
     <div className="p-8 max-w-4xl mx-auto text-center">
       <h2 className="text-3xl font-bold text-amber-700">Doce É Ser</h2>
