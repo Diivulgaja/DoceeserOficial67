@@ -288,8 +288,6 @@ const ProductCard = ({ product, onAdd, onCustomize }) => {
               </div>
             </div>
           )}
-        </div>
-
         <div>
           <OrderSummary cart={cart} deliveryType={deliveryType} />
         </div>
