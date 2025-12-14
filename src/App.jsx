@@ -291,8 +291,6 @@ const ProductCard = ({ product, onAdd, onCustomize }) => {
         <div>
           <OrderSummary cart={cart} deliveryType={deliveryType} />
         </div>
-      </div>
-    </div>
   );
   const AboutPage = (
     <div className="p-8 max-w-4xl mx-auto text-center">
