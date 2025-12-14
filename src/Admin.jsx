@@ -65,7 +65,7 @@ export default function Admin() {
     `Cliente: ${customer.nome || '-'}%0A` +
     `Telefone: ${customer.telefone || '-'}%0A` +
     `Endereço: ${fullAddress}%0A` +
-    `Mapa: ${mapsLink}%0A%0A` +;
+    `Mapa: ${mapsLink}%0A%0A` ;
 
   return body;
 };
