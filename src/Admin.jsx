@@ -1,7 +1,9 @@
 // src/Admin.jsx
 import React, { useEffect, useState, useMemo } from 'react';
-// CORREÇÃO: Usando importação via CDN para garantir que funcione sem instalação local
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+// IMPORTAÇÕES PADRÃO DO REACT (Certifique-se de ter instalado via npm/yarn)
+// npm install @supabase/supabase-js lucide-react recharts
+import { createClient } from '@supabase/supabase-js'; 
 import { 
   Trash2, Clock, Check, Loader2, 
   ShoppingBag, DollarSign, Users, 
@@ -14,10 +16,12 @@ import {
 } from 'recharts';
 
 // --- CONFIGURAÇÃO DO SUPABASE ---
-// ⚠️ IMPORTANTE: Substitua pelos seus dados reais se necessário.
-const SUPABASE_URL = 'https://elpinlotdogazhpdwlqr.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVscGlubG90ZG9nYXpocGR3bHFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzMjU3MjEsImV4cCI6MjA4MDkwMTcyMX0.alb18e60SkJGV1EBcjJb8CSmj7rshm76qcxRog_B2uY';
+// ⚠️ ATENÇÃO: Se você já tem o arquivo './supabaseClient', pode importá-lo.
+// Caso contrário, preencha as chaves abaixo para conectar ao banco.
+const SUPABASE_URL = 'https://sua-url-do-projeto.supabase.co';
+const SUPABASE_ANON_KEY = 'sua-chave-anonima-aqui';
 
+// Inicialização do cliente (pode ser substituído pela importação do seu arquivo local)
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // --------------------------------
 
@@ -25,7 +29,8 @@ const ADMIN_PASSWORD = '071224';
 const TABLE = 'doceeser_pedidos';
 const MOTOBOY_NUMBER = '5548991692018'; 
 
-// --- ESTILOS CSS (GARANTE O VISUAL SEM TAILWIND) ---
+// --- ESTILOS CSS INJETADOS NO COMPONENTE ---
+// Isso garante que o visual funcione 100% sem precisar de arquivos .css externos
 const styles = `
   :root {
     --primary: #d97706; /* Amber 600 */
@@ -46,7 +51,7 @@ const styles = `
   * { box-sizing: border-box; }
 
   .admin-container {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-body);
     min-height: 100vh;
     color: var(--text-main);
